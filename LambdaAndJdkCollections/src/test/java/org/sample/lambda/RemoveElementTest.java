@@ -10,49 +10,14 @@ import org.apache.commons.collections4.Predicate;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.LoggerFactory;
 
-import org.slf4j.Logger;
-
-/**
- * To demonstrate how to use lambda in jdk8. also compare the difference with
- * jdk7 or apache commons-collections.
- * 
- * @author Eric.F
- * @since 20170504
- *
- */
-public class ListInterfaceLambdaTest {
-
-	private static final Logger logger = LoggerFactory.getLogger(ListInterfaceLambdaTest.class);
-
+public class RemoveElementTest {
+	
 	private List<String> sampleStringList;
-
+	
 	@Before
 	public void beforeTest() {
 		sampleStringList = new ArrayList<>(Arrays.asList("You", "must", "be", "a", "professional", "guy"));
-	}
-
-	/**
-	 * Loop method using before jdk8
-	 */
-	@Test
-	public void loopListForJdk7() {
-		for (String str : sampleStringList) {
-			if (str.length() < 4)
-				logger.info(str);
-		}
-	}
-
-	/**
-	 * new foreach method in jdk8 with lambda.
-	 */
-	@Test
-	public void loopListForJdk8() {
-		sampleStringList.forEach(str -> {
-			if (str.length() > 4)
-				logger.info(str);
-		});
 	}
 
 	/**
@@ -67,17 +32,7 @@ public class ListInterfaceLambdaTest {
 		}
 		Assert.assertEquals(4, sampleStringList.size());
 	}
-
-	/**
-	 * lambda removeif also will operate the collection itself.
-	 */
-	@Test
-	public void removeElementForJdk8() {
-		sampleStringList.removeIf(str -> str.length() < 3);
-		// be, a will be removed
-		Assert.assertEquals(4, sampleStringList.size());
-	}
-
+	
 	/**
 	 * Apache collectionUtils filter method will filter the list with evaluate condition.
 	 */
@@ -89,10 +44,18 @@ public class ListInterfaceLambdaTest {
 				return obj.length() < 3;
 			}
 		});
-		//be, a will left
+		//be, a will be left
 		Assert.assertEquals(2, sampleStringList.size());
 	}
-	
-	
+
+	/**
+	 * lambda removeif also will operate the collection itself.
+	 */
+	@Test
+	public void removeElementForJdk8() {
+		sampleStringList.removeIf(str -> str.length() < 3);
+		// be, a will be removed
+		Assert.assertEquals(4, sampleStringList.size());
+	}
 
 }
