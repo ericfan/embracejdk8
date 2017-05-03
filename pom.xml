@@ -12,7 +12,7 @@
 	</properties>
 	
 	<modules>
-		<module>LambdaAndCollections</module>
+		<module>LambdaAndJdkCollections</module>
 	</modules>
 
 	<build>
