@@ -74,22 +74,25 @@ public class ListInterfaceLambdaTest {
 	@Test
 	public void removeElementForJdk8() {
 		sampleStringList.removeIf(str -> str.length() < 3);
+		// be, a will be removed
 		Assert.assertEquals(4, sampleStringList.size());
 	}
 
 	/**
-	 * Apache collectionUtils will remove the elements that not satisfy the
-	 * condition.
+	 * Apache collectionUtils filter method will filter the list with evaluate condition.
 	 */
 	@Test
 	public void removeElementForApacheCommons() {
-		CollectionUtils.filter(sampleStringList, new Predicate<String>() { // 删除长度大于3的元素
+		CollectionUtils.filter(sampleStringList, new Predicate<String>() {
 			@Override
 			public boolean evaluate(String obj) {
 				return obj.length() < 3;
 			}
 		});
+		//be, a will left
 		Assert.assertEquals(2, sampleStringList.size());
 	}
+	
+	
 
 }
