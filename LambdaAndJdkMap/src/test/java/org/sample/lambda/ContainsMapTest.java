@@ -29,7 +29,6 @@ public class ContainsMapTest extends PopulateTest {
 	@Test
 	public void containsKeyForJdk8() {
 		Assert.assertEquals("DefaultValue", sampleMap.getOrDefault(8, "DefaultValue"));
-		;
 	}
 
 }
