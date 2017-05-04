@@ -17,16 +17,9 @@ import org.slf4j.LoggerFactory;
  * @since 20170504
  *
  */
-public class LoopElementTest {
+public class LoopElementTest extends PopulateTest{
 
 	private static final Logger logger = LoggerFactory.getLogger(LoopElementTest.class);
-
-	private List<String> sampleStringList;
-	
-	@Before
-	public void beforeTest() {
-		sampleStringList = new ArrayList<>(Arrays.asList("You", "must", "be", "a", "professional", "guy"));
-	}
 
 	/**
 	 * Loop method using before jdk8

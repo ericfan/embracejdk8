@@ -11,15 +11,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class RemoveElementTest {
+public class RemoveElementTest extends PopulateTest{
 	
-	private List<String> sampleStringList;
-	
-	@Before
-	public void beforeTest() {
-		sampleStringList = new ArrayList<>(Arrays.asList("You", "must", "be", "a", "professional", "guy"));
-	}
-
 	/**
 	 * Iterator will operate the collection itself.
 	 */

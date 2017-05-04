@@ -11,16 +11,9 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class SortElementTest {
-
-	private List<String> sampleStringList;
+public class SortElementTest extends PopulateTest{
 
 	private static final Logger logger = LoggerFactory.getLogger(SortElementTest.class);
-
-	@Before
-	public void beforeTest() {
-		sampleStringList = new ArrayList<>(Arrays.asList("You", "must", "be", "a", "professional", "guy"));
-	}
 
 	/**
 	 * Collections sort method will sort the list element uppercase firstly.
