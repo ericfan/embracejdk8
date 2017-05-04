@@ -15,7 +15,7 @@ public class SortElementTest {
 
 	private List<String> sampleStringList;
 
-	private static final Logger logger = LoggerFactory.getLogger(LoopElementTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(SortElementTest.class);
 
 	@Before
 	public void beforeTest() {
