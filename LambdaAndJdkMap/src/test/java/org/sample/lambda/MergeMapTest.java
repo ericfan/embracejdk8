@@ -23,7 +23,6 @@ public class MergeMapTest extends PopulateTest {
 		sampleMap.merge(8, "aaa", (legacyV, newV) -> legacyV.concat(newV));
 		Assert.assertEquals(8, sampleMap.size());
 		Assert.assertEquals("!aaa", sampleMap.getOrDefault(8, "DefaultValue"));
-
 	}
 
 }
