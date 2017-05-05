@@ -11,7 +11,7 @@ public class PopulateTest {
 	protected List<String> sampleStringList;
 
 	@Before
-	public void beforeTest() {
+	public void setup() {
 		sampleStringList = new ArrayList<>(Arrays.asList("You", "must", "be", "a", "professional", "guy"));
 	}
 }
