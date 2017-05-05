@@ -15,6 +15,7 @@
 	<modules>
 		<module>LambdaAndJdkCollections</module>
 		<module>LambdaAndJdkMap</module>
+		<module>StreamBasicApi</module>
 	</modules>
 
 	<dependencies>
