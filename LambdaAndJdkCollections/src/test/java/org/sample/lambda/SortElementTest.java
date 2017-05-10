@@ -4,12 +4,11 @@ import java.util.Collections;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class SortElementTest extends PopulateTest{
-
-	private static final Logger logger = LoggerFactory.getLogger(SortElementTest.class);
 
 	/**
 	 * Collections sort method will sort the list element uppercase firstly.
@@ -18,7 +17,7 @@ public class SortElementTest extends PopulateTest{
 	public void sortElementForJdk7() {
 		Collections.sort(sampleStringList);
 		Assert.assertEquals(6, sampleStringList.size());
-		sampleStringList.forEach(str -> {logger.info(str);});
+		sampleStringList.forEach(str -> {log.info(str);});
 	}
 	
 	/**
@@ -28,7 +27,7 @@ public class SortElementTest extends PopulateTest{
 	public void sortElementForJdk8() {
 		sampleStringList.sort((str1, str2) -> str1.toLowerCase().compareTo(str2.toLowerCase()));
 		Assert.assertEquals(6, sampleStringList.size());
-		sampleStringList.forEach(str -> {logger.info(str);});
+		sampleStringList.forEach(str -> {log.info(str);});
 	}
 	
 }

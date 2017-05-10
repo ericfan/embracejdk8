@@ -16,6 +16,7 @@
 		<module>LambdaAndJdkCollections</module>
 		<module>LambdaAndJdkMap</module>
 		<module>StreamBasicApi</module>
+		<module>DateApi</module>
 	</modules>
 
 	<dependencies>
@@ -34,6 +35,11 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.16</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>

@@ -49,7 +49,7 @@ public class PopulateTest {
 		intStreamList = Arrays.asList(1,2,3,4,5,6,7,8,9,10,100);
 		longStreamList = Arrays.asList(1l,3l,5l,7l,9l,11l,13l);
 		doubleStreamList = Arrays.asList(0.01,0.12,0.22,0.32,0.42);
-		strStreamList = Arrays.asList("u","r","not","a","girl","without","story");
+		strStreamList = Arrays.asList("u","r","not","a","girl","without","story","but","u","r","a","women","now");
 	}
 
 }

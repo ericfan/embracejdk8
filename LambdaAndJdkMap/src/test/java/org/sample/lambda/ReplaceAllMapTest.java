@@ -3,13 +3,12 @@ package org.sample.lambda;
 import java.util.Map;
 
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class ReplaceAllMapTest extends PopulateTest{
 
-	private static final Logger logger = LoggerFactory.getLogger(ReplaceAllMapTest.class);
-	
 	/**
 	 * replace all the value in map with uppercase.
 	 */
@@ -18,7 +17,7 @@ public class ReplaceAllMapTest extends PopulateTest{
 		for(Map.Entry<Integer, String> entry : sampleMap.entrySet()){
 			entry.setValue(entry.getValue().toUpperCase());
 		}
-		sampleMap.forEach((k,v) -> logger.info(v));
+		sampleMap.forEach((k,v) -> log.info(v));
 	}
 	
 	/**
@@ -27,7 +26,7 @@ public class ReplaceAllMapTest extends PopulateTest{
 	@Test
 	public void replaceAllValueForJdk8() {
 		sampleMap.replaceAll((k,v) -> v.toUpperCase());
-		sampleMap.forEach((k,v) -> logger.info(v));
+		sampleMap.forEach((k,v) -> log.info(v));
 	}
 
 }

@@ -2,12 +2,11 @@ package org.sample.lambda;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class ContainsMapTest extends PopulateTest {
-
-	private static final Logger logger = LoggerFactory.getLogger(ContainsMapTest.class);
 
 	/**
 	 * need to check nullpoint when you get value with key from a map for jdk7.
@@ -20,9 +19,9 @@ public class ContainsMapTest extends PopulateTest {
 	@Test
 	public void containsKeyForJdk7() {
 		if (sampleMap.containsKey(8)) {
-			logger.info(sampleMap.get(8));
+			log.info(sampleMap.get(8));
 		} else {
-			logger.info("DefaultValue");
+			log.info("DefaultValue");
 		}
 	}
 
