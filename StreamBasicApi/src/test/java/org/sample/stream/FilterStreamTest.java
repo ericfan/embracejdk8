@@ -7,6 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class FilterStreamTest extends PopulateTest {
 
+	/**
+	 * stream filter is a intermediate oper. 
+	 */
 	@Test
 	public void test() {
 		objStreamList.stream().filter(obj -> obj.getFirstName().equals("Eric"))
