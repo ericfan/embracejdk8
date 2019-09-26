@@ -1,0 +1,7 @@
+/.gradle/
+/.idea/
+/gradle/
+/embracejdk8.iml
+/.project
+/.DS_Store
+/.settings/
